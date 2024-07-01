@@ -1,0 +1,694 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: rgb(19, 19, 19);
+  position: relative;
+}
+
+body p {
+  color: cornsilk;
+}
+
+body a {
+  color: cornsilk;
+}
+
+body h2 {
+  color: cornsilk;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding-top: 0.8em;
+  align-items: center;
+}
+
+header .logo {
+  flex: 0 0 50%;
+}
+
+.responsive-burger {
+  display: none;
+}
+
+.responsive-nav {
+  display: none;
+}
+
+header .logo p {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+header nav {
+  flex: 0 0 40%;
+}
+
+header .slackImage {
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: end;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.hero-section {
+  margin-top: 4em;
+  width: 100%;
+  height: 100%;
+  padding: 3em 1em;
+}
+
+.hero-section h2 {
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.hero-section :nth-child(2) {
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 0.5em;
+  max-width: 50%;
+  line-height: 1.5em;
+}
+
+.my-goals-section {
+  margin-top: 3em;
+}
+
+.mygoals-head h2 {
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.mygoals-head p {
+  text-transform: capitalize;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 0.5em;
+  max-width: 50%;
+  line-height: 1.5em;
+}
+
+.email-time {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.email-time :nth-child(2) {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 0.1em;
+}
+.email-time :nth-child(3) {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 0.1em;
+}
+.email-time :nth-child(1) {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.mygoals-carousel {
+  width: 100%;
+
+  height: 100%;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* gap: 0.5em; */
+  margin-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.mygoals-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.mygoals {
+  flex: 0 0 25%;
+  border: 1px solid white;
+  height: 100%;
+  scroll-snap-align: start;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  min-height: 15vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  background-color: cornsilk;
+}
+
+.mygoals p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: black;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mygoals p:nth-child(2) {
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  font-weight: 400;
+}
+
+/* mobile phones */
+
+@media (max-width: 767px) {
+  body {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(19, 19, 19);
+    padding-bottom: 3em;
+  }
+
+  body p {
+    color: cornsilk;
+  }
+
+  body a {
+    color: cornsilk;
+  }
+
+  body h2 {
+    color: cornsilk;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    padding-top: 1.5em;
+    align-items: center;
+  }
+
+  header .logo {
+    flex: 0 0 50%;
+  }
+
+  header .logo p {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: bold;
+  }
+
+  header nav {
+    flex: 0 0 40%;
+    display: none;
+  }
+
+  header .slackImage {
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: end;
+    display: none;
+  }
+
+  .responsive-nav {
+    display: none;
+    flex-direction: column;
+    background-color: cornsilk;
+    width: 100%;
+    height: 100%;
+    padding: 2em 0em;
+    position: sticky;
+    align-items: center;
+    gap: 1em;
+    border-radius: 10px;
+  }
+
+  .responsive-nav nav {
+    flex: 0 0 100%;
+  }
+
+  .responsive-nav .slackImage {
+    flex: 0 0 100%;
+    display: flex;
+  }
+
+  .responsive-nav nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .responsive-nav nav ul li {
+    list-style: none;
+  }
+
+  .responsive-nav nav ul li a {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+
+  .hero-section {
+    margin-top: 1em;
+    width: 100%;
+    height: 100%;
+    padding: 3em 0em;
+  }
+
+  .hero-section h2 {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 20px;
+  }
+  .hero-section :nth-child(2) {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.8em;
+    max-width: 100%;
+    line-height: 1.5em;
+  }
+
+  .my-goals-section {
+    margin-top: 2em;
+  }
+
+  .mygoals-head h2 {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 20px;
+  }
+
+  .mygoals-head p {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.5em;
+    max-width: 100%;
+    line-height: 1.5em;
+  }
+
+  .email-time {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+
+  .email-time :nth-child(2) {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.1em;
+  }
+  .email-time :nth-child(3) {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.1em;
+  }
+  .email-time :nth-child(1) {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .mygoals-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* gap: 0.5em; */
+    margin-top: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .mygoals-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mygoals {
+    flex: 0 0 95%;
+    border: 1px solid white;
+    height: 100%;
+    scroll-snap-align: start;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    background-color: cornsilk;
+  }
+
+  .mygoals:last-child {
+    flex: 0 0 100%;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+
+  .mygoals p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    color: black;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .mygoals p:nth-child(2) {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    font-weight: 400;
+  }
+
+  .responsive-burger {
+    display: flex;
+    flex: 0 0 50%;
+    height: 50px;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .burgers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .burger {
+    width: 2em;
+    height: 0.3em;
+    background-color: cornsilk;
+    border-radius: 5px;
+  }
+}
+
+/* tablets ipads */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(19, 19, 19);
+    padding-bottom: 3em;
+  }
+
+  body p {
+    color: cornsilk;
+  }
+
+  body a {
+    color: cornsilk;
+  }
+
+  body h2 {
+    color: cornsilk;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    padding-top: 1.5em;
+    align-items: center;
+  }
+
+  header .logo {
+    flex: 0 0 50%;
+  }
+
+  header .logo p {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: bold;
+  }
+
+  header nav {
+    flex: 0 0 40%;
+    display: none;
+  }
+
+  header .slackImage {
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: end;
+    display: none;
+  }
+
+  .responsive-nav {
+    display: none;
+    flex-direction: column;
+    background-color: cornsilk;
+    width: 100%;
+    height: 100%;
+    padding: 2em 0em;
+    position: sticky;
+    align-items: center;
+    gap: 1em;
+    border-radius: 10px;
+  }
+
+  .responsive-nav nav {
+    flex: 0 0 100%;
+  }
+
+  .responsive-nav .slackImage {
+    flex: 0 0 100%;
+    display: flex;
+  }
+
+  .responsive-nav nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .responsive-nav nav ul li {
+    list-style: none;
+  }
+
+  .responsive-nav nav ul li a {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+
+  .hero-section {
+    margin-top: 0em;
+    width: 100%;
+    height: 100%;
+    padding: 3em 0em;
+  }
+
+  .hero-section h2 {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 20px;
+  }
+  .hero-section :nth-child(2) {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.8em;
+    max-width: 100%;
+    line-height: 1.5em;
+  }
+
+  .my-goals-section {
+    margin-top: 2em;
+  }
+
+  .mygoals-head h2 {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 20px;
+  }
+
+  .mygoals-head p {
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.5em;
+    max-width: 100%;
+    line-height: 1.5em;
+  }
+
+  .email-time {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+
+  .email-time :nth-child(2) {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.1em;
+  }
+  .email-time :nth-child(3) {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    margin-top: 0.1em;
+  }
+  .email-time :nth-child(1) {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .mygoals-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* gap: 0.5em; */
+    margin-top: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .mygoals-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mygoals {
+    flex: 0 0 48%;
+    border: 1px solid white;
+    height: 100%;
+    scroll-snap-align: start;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    background-color: cornsilk;
+  }
+
+  .mygoals p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    color: black;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .mygoals p:nth-child(2) {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    font-weight: 400;
+  }
+
+  .responsive-burger {
+    display: flex;
+    flex: 0 0 50%;
+    height: 50px;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .burgers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .burger {
+    width: 2em;
+    height: 0.3em;
+    background-color: cornsilk;
+    border-radius: 5px;
+  }
+}
